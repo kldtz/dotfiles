@@ -1,0 +1,25 @@
+[core]
+	editor = vim
+
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+
+[pull]
+	rebase = true
+
+[rebase]
+	autoStash = true
+
+[user]
+	email = tbs.kldtz@gmail.com
+	name = Tobias Kolditz
+
+[alias]
+	co = checkout
+	br = branch
+	commit = ci
+	st = status
+	unstage = reset HEAD --
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	cp = cherry-pick
+	s = status -s
