@@ -20,6 +20,6 @@
 	commit = ci
 	st = status
 	unstage = reset HEAD --
-	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	hist = log --pretty=format:'%h %Cblue%ad %Creset%s%d %Cred[%an]' --date=short --graph
 	cp = cherry-pick
 	s = status -s
