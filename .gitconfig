@@ -23,3 +23,6 @@
 	hist = log --pretty=format:'%h %Cblue%ad %Creset%s%d %Cred[%an]' --date=short --graph
 	cp = cherry-pick
 	s = status -s
+
+[merge "ours"]
+	driver = true
