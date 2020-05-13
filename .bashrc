@@ -130,3 +130,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # alias for versioning dotfiles with git
 alias dotfiles='/usr/bin/git --git-dir=/home/tobias/.dotfiles/ --work-tree=/home/tobias'
+
+# source shortcuts
+. ~/bin/shortcuts
+
+alias g='git'

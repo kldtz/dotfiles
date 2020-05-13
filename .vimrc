@@ -48,8 +48,6 @@ set showmatch
 " use utf-8
 set encoding=utf-8
 
-" enable all Python syntax highlighting features
-let python_highlighting_all = 1
 
 """"""""""""""""""
 " User Interface "
@@ -70,6 +68,10 @@ set ruler
 set relativenumber
 " always show status line
 set laststatus=2
+
+" defaults for splits
+set splitbelow
+set splitright
 
 
 """""""""
@@ -102,12 +104,40 @@ vnoremap <F5> :w! %:p:h/.julia-vim.tmp.jl<CR>:execute 'SlimeSend1 include("' . e
 " Include current Julia file in REPL
 nnoremap <F6> :execute 'SlimeSend1 include("' . expand('%:p') . '"); println()'<CR> 
 
+""""""""""""""""""""""""""""""
+" Filetype-specific settings "
+""""""""""""""""""""""""""""""
+
+" Python
+"
+" enable all Python syntax highlighting features
+let python_highlighting_all = 1
+
+au BufNewFile,BufRead *.py
+	\ set tabstop=4 |
+	\ set softtabstop=4 |
+	\ set shiftwidth=4 |
+	\ set textwidth=79 |
+	\ set expandtab | 
+	\ set autoindent |
+	\ set fileformat=unix 
+
+" web development
+au BufNewFile,BufRead *.js, *.html, *.css
+	\ set tabstop=2 |
+	\ set softtabstop=2 |
+	\ set shiftwidth=2 
+
+
 """""""""
 " Other "
 """""""""
 
 " no need to be compatible with VI
 set nocompatible
+
+" use clipboard register
+set clipboard^=unnamed,unnamedplus
 
 filetype plugin on
 
