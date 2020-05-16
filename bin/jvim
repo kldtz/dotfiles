@@ -1,0 +1,8 @@
+#!/bin/bash
+
+tmux new \; \
+	send-keys "vim $1" Enter \; \
+	split-window -v \; \
+	rename-window julia \; \
+	send-keys "julia -O 0" Enter \; \
+	select-pane -t 0 \; 

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+tmux new \; \
+	send-keys "vim $1" Enter \; \
+	split-window -v \; \
+	rename-window python \; \
+	send-keys "ipython" Enter \; \
+	select-pane -t 0 \; 
