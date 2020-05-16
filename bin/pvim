@@ -4,5 +4,5 @@ tmux new \; \
 	send-keys "vim $1" Enter \; \
 	split-window -v \; \
 	rename-window python \; \
-	send-keys "ipython" Enter \; \
+	send-keys "conda activate; python" Enter \; \
 	select-pane -t 0 \; 
