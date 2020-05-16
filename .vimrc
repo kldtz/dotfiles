@@ -27,14 +27,14 @@ set smartcase
 " File Search "
 """""""""""""""
 
-" Make find commands recursive by default
+" Make find commands recursive by default, overwrite default
 " (basically prefixing each query with **/)
-set path+=**
+set path=$PWD/**
 
 " Display all matching files on tab completion
 set wildmenu
 
-set wildignore=*/.git/*,*/node_modules/*,*/__pycache__/*,*/tags
+set wildignore+=*/.git/*,*/node_modules/*,*/__pycache__/*,*/tags,*.pyc,*.o
 
 
 """"""""""""""""""
