@@ -17,7 +17,7 @@
 [alias]
 	co = checkout
 	br = branch
-	commit = ci
+	ci = commit
 	st = status
 	unstage = reset HEAD --
 	hist = log --pretty=format:'%h %Cblue%ad %Creset%s%d %Cred[%an]' --date=short --graph
