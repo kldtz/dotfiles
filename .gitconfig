@@ -27,3 +27,6 @@
 
 [merge "ours"]
 	driver = true
+
+[commit]
+	template = ~/.gitmessage
