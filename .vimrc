@@ -139,7 +139,8 @@ set nocompatible
 " use clipboard register
 set clipboard^=unnamed,unnamedplus
 
-filetype plugin on
+" enable filetype detection, plugin and indent files
+filetype plugin indent on
 
 " set tmux as slime target
 let g:slime_target = "tmux"
