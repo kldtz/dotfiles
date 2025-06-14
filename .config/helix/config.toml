@@ -1,0 +1,17 @@
+theme = "autumn_night"
+
+[editor]
+auto-pairs = false
+line-number = "relative"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+C-S-d = [":insert-output date +'%Y-%m-%d'"]
+

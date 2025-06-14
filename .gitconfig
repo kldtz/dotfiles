@@ -1,0 +1,36 @@
+[core]
+	editor = hx
+
+[credential]
+	# This is a symlink to either git-credentials-libsecret (Linux) or git-credential-osxkeychain (Mac)	
+	helper = git-secret
+
+[pull]
+	rebase = true
+
+[rebase]
+	autoStash = true
+
+[user]
+	email = tbs.kldtz@gmail.com
+	name = Tobias Kolditz
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	hist = log --pretty=format:'%h %Cblue%ad %Creset%s%d %Cred[%an]' --date=short --graph
+	cp = cherry-pick
+	s = status -s
+
+[merge "ours"]
+	driver = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
