@@ -1,10 +1,6 @@
 [core]
 	editor = hx
 
-[credential]
-	# `git-secret` is a symlink to either git-credentials-libsecret (Linux) or git-credential-osxkeychain (Mac)	
-	helper = git-secret
-
 [pull]
 	rebase = true
 
@@ -34,3 +30,5 @@
 	required = true
 [init]
 	defaultBranch = main
+[push]
+	autoSetupRemote = true
