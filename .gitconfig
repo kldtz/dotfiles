@@ -2,7 +2,7 @@
 	editor = hx
 
 [credential]
-	# This is a symlink to either git-credentials-libsecret (Linux) or git-credential-osxkeychain (Mac)	
+	# `git-secret` is a symlink to either git-credentials-libsecret (Linux) or git-credential-osxkeychain (Mac)	
 	helper = git-secret
 
 [pull]
