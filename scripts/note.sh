@@ -34,6 +34,11 @@ fi
 title="$1"
 shift
 tags=`echo "$*" | tr '[:lower:]' '[:upper:]'`
+# Default tag
+if [ -z "$tags" ]; then
+  tags='?'
+fi
+
 
 function create_note() {
   day=`date -Idate`
