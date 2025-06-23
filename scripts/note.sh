@@ -10,7 +10,7 @@ index="${NOTES}/.index.tsv"
 
 # No options or arguments
 if [ "$#" -lt 1 ]; then
-  file=`fzf +i < "$index" | cut -f1`
+  file=`fzf +i --reverse < "$index" | cut -f1`
   hx "${NOTES}/$file"
   exit 0
 fi
@@ -23,7 +23,7 @@ fi
 
 # Fuzzy-find and delete if '-d' and no other arguments
 if [ -n $delete ] && [ "$#" -lt 1 ]; then
-  file=`fzf +i < "$index" | cut -f1`
+  file=`fzf +i --reverse < "$index" | cut -f1`
   rm "${NOTES}/$file"
   sed -i "/^${file}/d" "$index"
   exit 0
