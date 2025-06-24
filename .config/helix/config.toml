@@ -13,5 +13,4 @@ normal = "block"
 select = "underline"
 
 [keys.normal]
-C-S-d = [":insert-output date +'%Y-%m-%d'"]
-
+C-S-d = [":insert-output date +'%a, %d.%m.%Y'"]

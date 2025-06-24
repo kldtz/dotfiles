@@ -1,4 +1,3 @@
 function r
-    set dir $(ls -1 "$REPOS" | fzf --reverse)
-    cd "$REPOS/$dir"
+    cd "$REPOS/$(ls -1 "$REPOS" | fzf --reverse)"
 end
