@@ -12,5 +12,15 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+[editor.whitespace.render]
+space = "none"
+tab = "none"
+nbsp = "none"
+nnbsp = "none"
+newline = "all"
+
+[editor.whitespace.characters]
+newline = "⏎"
+
 [keys.normal]
 C-S-d = [":insert-output date +'%a, %d.%m.%Y'"]
